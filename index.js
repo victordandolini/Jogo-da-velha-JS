@@ -3,7 +3,8 @@ let playerSelect = document.getElementById("player-select")
 let winnerSelect = document.getElementById("player-winner")
 let squares = document.getElementsByTagName("square")
 
-changePlayer('X')
+drawPlayer()
+// changePlayer('X')
 
 function squareSelect (id){
     if (winner !== null) {
@@ -92,7 +93,7 @@ function checkWinner(){
 function changeWinner(square) {
     winner = square.innerHTML;
     winnerSelect.innerHTML = `Jogador ${winner} venceu!`
-    winnerSelect.style.color = '#00f'
+    winnerSelect.style.color = '#0f0'
     playerSelect.innerHTML =  ``;
     
 }
@@ -122,7 +123,17 @@ function restart(){
         square.style.background = '#ffffff'
         square.style.color = '#fff'
         square.innerHTML = '-'
-        playerSelect.style.color = '#00f'
     }
-    changePlayer("X")
+    changePlayer(player)
+}
+
+function drawPlayer (){
+    if(Math.floor(Math.random() * 2)==0) {
+        player = 'X'
+        playerSelect.style.color = '#00f'
+    }else{
+        player = 'O'
+        playerSelect.style.color = '#f00'
+    }
+    playerSelect.innerHTML =  `Jogador ${player} é a sua vez`;
 }
