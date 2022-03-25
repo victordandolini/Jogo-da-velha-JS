@@ -1,26 +1,92 @@
-body{
-    text-align: center;
-
+body {
+  margin: 0;
+  text-align: center;
+  background-image: url(./SL-043021-42650-28.jpg);
+  background-repeat: cover;
+  background-size: cover;
+  font-family: "Comfortaa", cursive;
+  
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  
 }
-.square{
-    display: inline-block;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    background-color:gray;
-    padding: 30px;
-    margin: 5px;
+h1{
     font-size: 40px;
-    cursor: pointer;
-    color:gray;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    color: #ffb701;
+}
+#game{
+    margin-top:100px
+}
+#place{
+    font-size: 40px;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    color: #00f;
+}
+.square {
+    border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px 5px black;
+  padding: 30px;
+  margin: 5px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ffffff;
 }
 
 .player, .winner {
-    margin: 10px;
-    font-size:10px;
-    display:flex;
-    flex-direction: column;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  color: #00f;
 }
 
 
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    background-color: #5eff01;
+    border: none;
+    border-radius: 15px;
+    font-family: "Comfortaa", cursive;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px rgb(0, 0, 0);
+      
+  }
+  
+  .button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #5eff01;
+    transform: translateY(4px);
+  }
+
+  .button {
+    animation: moveInBottom 1s ease-out;
+    animation-fill-mode: backwards;
+}
+  @keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 

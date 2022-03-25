@@ -19,8 +19,13 @@ function squareSelect (id){
 
     if (player === "X") {
         player = "O";
+        square.style.backgroundColor = '#00f'
+        playerSelect.style.color = '#f00'
+        
     }else{
         player = "X";
+        square.style.backgroundColor = '#f00'
+        playerSelect.style.color = '#00f'
     }
     changePlayer(player)
     checkWinner()
@@ -28,7 +33,8 @@ function squareSelect (id){
 
 function changePlayer (value){
     player = value;
-    playerSelect.innerHTML = player;
+    playerSelect.innerHTML =  `Jogador ${value} é a sua vez`;
+    
 }
 
 function checkWinner(){
@@ -85,7 +91,10 @@ function checkWinner(){
 
 function changeWinner(square) {
     winner = square.innerHTML;
-    winnerSelect.innerHTML = winner
+    winnerSelect.innerHTML = `Jogador ${winner} venceu!`
+    winnerSelect.style.color = '#00f'
+    playerSelect.innerHTML =  ``;
+    
 }
 
 function changeColorSquare(square1, square2, square3) {
@@ -110,9 +119,10 @@ function restart(){
 
     for (let index = 1; index <=9; index++) {
         let square = document.getElementById(index);
-        square.style.background = 'grey'
-        square.style.color = 'grey'
+        square.style.background = '#ffffff'
+        square.style.color = '#fff'
         square.innerHTML = '-'
+        playerSelect.style.color = '#00f'
     }
     changePlayer("X")
 }
