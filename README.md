@@ -23,7 +23,7 @@ In this project, the challenge will create a Hash game using only HTML, CSS and 
 
 <h3> :calling: Preview Project</h3>
 <h1 align="center">
-  <img alt="previewgenius" title="hash-game" src="./previewjogodavelha.jpg" />
+  <img alt="previewgenius" title="hash-game" src="./preview jogo da velha.jpg" />
 </h1>
 <!--Bottom session-->
 <br><h4 align=center>Made with by <a target="_blank" href="https://github.com/victordandolini" >Victor Dandolini</a></h4> 
