@@ -6,7 +6,7 @@
 <!--About session-->
 <h1 align="center">Jogo da Velha Game<br>Digital Innovation One</h1>
 
-<img src="./badge.png" title="Badge" width="70" height="70">
+<img src="./badge.png" title="Badge" width="170" height="170">
 
 Bootcamp Órbi Web Games Developer the [Digital Innovation One](https://digitalinnovation.one/).
 
